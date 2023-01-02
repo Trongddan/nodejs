@@ -5,7 +5,7 @@ import { engine } from 'express-handlebars';
 const app = express();
 const port = 3001;
 //cau hinh truy cap static file
-  app.use(express.static('./src/public'));
+       app.use(express.static('./src/public'));
 //http logger
 app.use(morgan('combined'));
 //khai báo req.body
