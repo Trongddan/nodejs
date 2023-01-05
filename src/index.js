@@ -2,8 +2,12 @@ import express from 'express';
 import morgan from 'morgan';
 import Router from './routes/index.js';
 import { engine } from 'express-handlebars';
+import db from '../src/config/db/index.js';
 const app = express();
 const port = 3001;
+//connect db
+db();
+
 //cau hinh truy cap static file
 app.use(express.static('./src/public'));
 //http logger
